@@ -1,4 +1,4 @@
-FROM node:12 as build-deps
+FROM node as build-deps
 WORKDIR /usr/equity-wlallet/app
 COPY . .
 CMD yarn start:docker
