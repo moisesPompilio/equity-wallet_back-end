@@ -14,6 +14,5 @@ describe("Create user Controller", () => {
                 password: "testIntegration",
             })
             console.log(response.status);
-            //oks
     })
 })
