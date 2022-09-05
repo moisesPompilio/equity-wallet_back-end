@@ -9,8 +9,8 @@ export class PostgresUsersRepository implements IUsersRepository {
         const user = await this.repository().findOne({ email });
         return user;
     }
-    async save(user: User) {
-        await this.repository().save(user);
+    async save(user: User): Promise<User> {
+        return await this.repository().save(user);
     }
     async findById(id: string): Promise<User> {
         const user = await this.repository().findOne({ id });
