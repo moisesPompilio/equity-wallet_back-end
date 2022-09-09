@@ -1,5 +1,5 @@
 
-import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Category } from "./Category";
 import { User } from "./User";
 const { v4: uuid } = require("uuid")
@@ -19,9 +19,11 @@ export class Item {
     value: number;
 
     @ManyToOne(() => User, { onDelete: 'CASCADE' })
+    @JoinColumn()
     idUser: User;
 
-    @ManyToOne(() => Category, { onDelete: 'CASCADE' })
+    @ManyToOne(() => Category, { cascade : true , eager : true})
+    @JoinColumn()
     idCategory: Category;
 
 

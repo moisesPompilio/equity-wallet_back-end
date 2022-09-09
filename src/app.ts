@@ -1,5 +1,5 @@
 import express, { NextFunction, Request, Response } from "express";
-import cors from "cors";
+var cors = require('cors')
 import logger from "morgan";
 import bodyParser from "body-parser";
 import { connectionToServeDatabase } from "./config/db";
@@ -8,16 +8,15 @@ import routes from "./routes";
 const app = express();
 app.use(express.json());
 
+/**
+ * open access to services
+ */
+ app.use(cors());
 
 /**
  * The routes of API
  */
 app.use(routes);
-
-/**
- * open access to services
- */
-app.use(cors());
 
 /**
  * Permission to receive and send json

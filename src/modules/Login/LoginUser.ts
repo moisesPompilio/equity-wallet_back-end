@@ -16,13 +16,13 @@ export class LoginUser {
 
 
         if (!userAlreadyExists) {
-            throw new Error("The User does not exist");
+            throw new Error("The User does not exist!");
         }
 
-        if (verifyPassword.execute(data.password, userAlreadyExists.password)) {
+        if (await verifyPassword.execute(data.password, userAlreadyExists.password)) {
             return createToken.execute(userAlreadyExists.id);
         } else {
-            throw new Error("Invalid password");
+            throw new Error("Invalid password!");
         }
     }
 }
