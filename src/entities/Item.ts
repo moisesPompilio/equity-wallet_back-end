@@ -18,7 +18,7 @@ export class Item {
     @Column({ type: "float" })
     value: number;
 
-    @ManyToOne(() => User, { onDelete: 'CASCADE' })
+    @ManyToOne(() => User, { cascade : true})
     @JoinColumn()
     idUser: User;
 

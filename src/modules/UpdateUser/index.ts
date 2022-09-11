@@ -1,5 +1,5 @@
 import { PostgresUsersRepository } from "../../repositories/implementations/PostgresUsersRepository";
-import { UpdateUserController } from "./UpadateUserController";
+import { UpdateUserController } from "./UpdateUserController";
 import { UpdateUserUseCase } from "./UpdateUserUseCsse";
 
 const postgresUsersRepository = new PostgresUsersRepository();

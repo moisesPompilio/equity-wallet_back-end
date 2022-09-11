@@ -10,7 +10,7 @@ export class UpdateUserController {
         const { name, password, email } = request.body;
         const id: any = await idetificationUser.execute(request);
         try {
-            await this.updateUserUseCase.execute(
+            const result = await this.updateUserUseCase.execute(
                 {
                     id,
                     name,
@@ -18,7 +18,7 @@ export class UpdateUserController {
                     email,
                 }
             );
-            return response.status(200).send();
+            return response.status(200).send(result);
         } catch (error) {
             return response.status(400).json({
                 message: error.message || "Unexpected error"

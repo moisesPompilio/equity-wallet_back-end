@@ -15,7 +15,7 @@ export class Category {
     @Column()
     expense: boolean;
 
-    @ManyToOne(() => User, { onDelete: 'CASCADE' })
+    @ManyToOne(() => User, { cascade : true})
     idUser: User;
    
     @OneToMany(() => Item, items => items.idCategory)

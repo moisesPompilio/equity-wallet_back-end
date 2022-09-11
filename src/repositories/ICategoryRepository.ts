@@ -1,3 +1,4 @@
+import { DeleteResult } from "typeorm";
 import { Category } from "../entities/Category";
 import { User } from "../entities/User";
 
@@ -6,6 +7,6 @@ export interface ICategoryRepository {
     findByTitleAndIdUser(title: string, idUser: User): Promise<Category>;
     findByIdUser(idUser: User): Promise<Category[]>;
     findById(id: string): Promise<Category>;
-    delete(id: string): Promise<void>;
+    delete(id: string): Promise<DeleteResult>;
     repository(): any;
 }

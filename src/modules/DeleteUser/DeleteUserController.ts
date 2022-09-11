@@ -9,8 +9,8 @@ export class DeleteUserController {
     async execute(request: Request, response: Response): Promise<Response> {
         const id: any = await idetificationUser.execute(request);
         try {
-            await this.deleteUser.execute(id);
-            return response.status(200).send();
+            const result = await this.deleteUser.execute(id);
+            return response.status(200).send(result);
         } catch (error) {
             return response.status(400).json({
                 message: error.message || "Unexpected error"

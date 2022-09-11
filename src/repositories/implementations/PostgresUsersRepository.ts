@@ -1,4 +1,4 @@
-import { getRepository } from 'typeorm';
+import { DeleteResult, getRepository } from 'typeorm';
 import { User } from '../../entities/User';
 import { IUsersRepository } from '../IUsersRepository';
 //import { UserRespository } from './RepositoriesLaunchers';
@@ -16,8 +16,8 @@ export class PostgresUsersRepository implements IUsersRepository {
         const user = await this.repository().findOne({ id });
         return user;
     }
-    async delete(id: string): Promise<void> {
-        await this.repository().delete(id);
+    async delete(id: string): Promise<DeleteResult> {
+        return await this.repository().delete(id);
     }
     repository() {
         return getRepository(User);
