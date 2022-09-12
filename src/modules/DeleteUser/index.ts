@@ -4,6 +4,6 @@ import { DeleteUserController } from "./DeleteUserController";
 
 const postgresUsersRepository = new PostgresUsersRepository();
 
-const deleteUser = new DeleteUser(postgresUsersRepository);
+export const deleteUser = new DeleteUser(postgresUsersRepository);
 
 export const deleteUserController = new DeleteUserController(deleteUser);

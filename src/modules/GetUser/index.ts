@@ -4,6 +4,6 @@ import { GetUserController } from "./GetUserController";
 
 const postgresUsersRepository = new PostgresUsersRepository();
 
-const getUser = new GetUser(postgresUsersRepository);
+export const getUser = new GetUser(postgresUsersRepository);
 
 export const getUserController = new GetUserController(getUser);

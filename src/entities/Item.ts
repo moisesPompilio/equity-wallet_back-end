@@ -18,11 +18,11 @@ export class Item {
     @Column({ type: "float" })
     value: number;
 
-    @ManyToOne(() => User, { cascade : true})
+    @ManyToOne(() => User, { onDelete: 'CASCADE' })
     @JoinColumn()
     idUser: User;
 
-    @ManyToOne(() => Category, { cascade : true , eager : true})
+    @ManyToOne(() => Category, { onDelete: 'CASCADE', eager: true })
     @JoinColumn()
     idCategory: Category;
 

@@ -9,10 +9,15 @@ export class CreateItemUseCase {
     ) {
         this.itemRepository = itemRepository;
     }
-    async execute(data: ICreateItemRequestDTO) {
+    async execute(data: ICreateItemRequestDTO): Promise<Item> {
 
-        const item = new Item(data);
+        try {
+            const item = new Item(data);
 
-        await this.itemRepository.save(item);
+            return await this.itemRepository.save(item);   
+        } catch (error) {
+            console.log(error.message)
+            throw new Error("Create new item failed!");
+        }
     }
 }

@@ -10,7 +10,12 @@ export class GetCategory {
         this.categoryRepository = categoryRepository;
     }
     async execute(idUser: User): Promise<Category[]> {
-        const catgories = await this.categoryRepository.findByIdUser(idUser);
-        return catgories;
+        try {
+            const catgories = await this.categoryRepository.findByIdUser(idUser);
+            return catgories;
+        } catch (error) {
+            throw new Error("Error Get Category!");
+        }
+
     }
 }

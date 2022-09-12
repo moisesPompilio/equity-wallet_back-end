@@ -8,8 +8,8 @@ export class DeleteItemController {
     async execute(request: Request, response: Response): Promise<Response> {
         const { id } = request.params;
         try {
-            await this.deleteItem.execute(id);
-            return response.status(200).send();
+            const result = await this.deleteItem.execute(id);
+            return response.status(200).send(result);
         } catch (error) {
             return response.status(400).json({
                 message: error.message || "Unexpected error"

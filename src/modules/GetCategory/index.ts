@@ -4,6 +4,6 @@ import { GetCategoryController } from "./GetCategoryController";
 
 const postgresCategoryRepository = new PostgresCategoryRepository();
 
-const getCategory = new GetCategory(postgresCategoryRepository);
+export const getCategory = new GetCategory(postgresCategoryRepository);
 
 export const getCategoryController = new GetCategoryController(getCategory);

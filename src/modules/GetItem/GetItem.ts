@@ -11,7 +11,11 @@ export class GetItem {
         this.itemsRepository = itemsRepository;
     }
     async execute(idUser: any): Promise<Item[]> {
-        const items = await this.itemsRepository.findByIdUser(idUser);
-        return items;
+        try {
+            const items = await this.itemsRepository.findByIdUser(idUser);
+            return items;
+        } catch (error) {
+            throw new Error("Erro Get Item!");
+        }
     }
 }

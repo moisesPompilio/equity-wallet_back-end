@@ -4,6 +4,6 @@ import { DeleteCategoryController } from "./DeleteCategoryContoller";
 
 const postgresCategoryRepository = new PostgresCategoryRepository();
 
-const deleteCategory = new DeleteCategory(postgresCategoryRepository);
+export const deleteCategory = new DeleteCategory(postgresCategoryRepository);
 
 export const deleteCategoryController = new DeleteCategoryController(deleteCategory);

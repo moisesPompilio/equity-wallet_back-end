@@ -4,6 +4,6 @@ import { GetItemController } from "./GetItemController";
 
 const postgresItemsRepository = new PostgresItemsRepository();
 
-const getItem = new GetItem(postgresItemsRepository);
+export const getItem = new GetItem(postgresItemsRepository);
 
 export const getItemController = new GetItemController(getItem);

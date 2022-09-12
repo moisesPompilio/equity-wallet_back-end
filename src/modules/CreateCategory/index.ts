@@ -4,6 +4,6 @@ import { CreateCategoryController } from './CreateCategoryController';
 
 const postgresCategoryRepository = new PostgresCategoryRepository();
 
-const createCategoryUseCase = new CreateCategoryUseCase(postgresCategoryRepository);
+export const createCategoryUseCase = new CreateCategoryUseCase(postgresCategoryRepository);
 
 export const createCategoryController = new CreateCategoryController(createCategoryUseCase);

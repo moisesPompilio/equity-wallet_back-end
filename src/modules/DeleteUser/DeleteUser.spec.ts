@@ -31,7 +31,7 @@ describe("Update user", () => {
     });
     it("Should Delete The User", async () => {
         const result = await deleteUser.execute(idUser);
-        expect(result).toHaveProperty("affected", 1)
+        expect(result).toHaveProperty("affected", 1);
     });
     it("Should Delete Failed", async () => {
         const idInvalid = idUser + "test";

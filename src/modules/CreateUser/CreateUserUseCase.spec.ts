@@ -1,7 +1,6 @@
 import { createConnection } from "typeorm";
 import { User } from "../../entities/User";
 import { PostgresUsersRepository } from "../../repositories/implementations/PostgresUsersRepository";
-import { IUsersRepository } from "../../repositories/IUsersRepository";
 import { CreateUserUseCase } from "./CreateUserUseCase";
 
 describe("Create user", () => {

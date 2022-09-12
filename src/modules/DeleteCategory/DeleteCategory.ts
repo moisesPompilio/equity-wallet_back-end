@@ -1,3 +1,4 @@
+import { DeleteResult } from "typeorm";
 import { ICategoryRepository } from "../../repositories/ICategoryRepository";
 
 export class DeleteCategory {
@@ -7,13 +8,13 @@ export class DeleteCategory {
     ) {
         this.categoryRepository = categoryRepository;
     }
-    async execute(id: string) {
+    async execute(id: string): Promise<DeleteResult> {
         const categoryDB = await this.categoryRepository.findById(id);
         if (!categoryDB) {
             throw new Error("Category does not exist.");
         }
 
 
-        await this.categoryRepository.delete(id);
+        return await this.categoryRepository.delete(id);
     }
 }

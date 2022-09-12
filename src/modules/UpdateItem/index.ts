@@ -4,6 +4,6 @@ import { UpdateItemUseCase } from "./UpdateItemUseCase";
 
 const postgresItemRepository = new PostgresItemsRepository();
 
-const updateItemUseCase = new UpdateItemUseCase(postgresItemRepository);
+export const updateItemUseCase = new UpdateItemUseCase(postgresItemRepository);
 
 export const updateItemController = new UpdateItemController(updateItemUseCase);

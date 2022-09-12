@@ -15,9 +15,9 @@ export class Category {
     @Column()
     expense: boolean;
 
-    @ManyToOne(() => User, { cascade : true})
+    @ManyToOne(() => User, { onDelete: 'CASCADE' })
     idUser: User;
-   
+
     @OneToMany(() => Item, items => items.idCategory)
     items?: Item[];
 
@@ -26,7 +26,7 @@ export class Category {
 
         if (!id) {
             this.id = uuid();
-        }else{
+        } else {
             this.id = id;
         }
     }

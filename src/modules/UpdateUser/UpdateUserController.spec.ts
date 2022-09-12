@@ -3,7 +3,7 @@ import { createConnection } from "typeorm";
 import { app } from "../../app";
 import { createToken } from "../../auth";
 
-describe("Get User Controller", () => {
+describe("Update User Controller", () => {
 
     let connections: any;
     let token: string;

@@ -9,9 +9,9 @@ export class UpdateCategoryController {
     async execute(request: Request, response: Response): Promise<Response> {
         const { title, expense } = request.body;
         const { id } = request.params;
-        const idUser:any = await idetificationUser.execute(request);
+        const idUser: any = await idetificationUser.execute(request);
         try {
-            await this.updateCategoryUseCase.execute(
+            const result = await this.updateCategoryUseCase.execute(
                 {
                     id,
                     title,
@@ -19,7 +19,7 @@ export class UpdateCategoryController {
                     idUser,
                 }
             );
-            return response.status(200).send();
+            return response.status(200).send(result);
         } catch (error) {
             return response.status(400).json({
                 message: error.message || "Unexpected error"

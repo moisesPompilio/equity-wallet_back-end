@@ -1,3 +1,4 @@
+import { DeleteResult } from "typeorm";
 import { IItemsRepository } from "../../repositories/IItemsRepository";
 
 export class DeleteItem {
@@ -7,12 +8,12 @@ export class DeleteItem {
     ) {
         this.ItemsRepository = ItemsRepository;
     }
-    async execute(id: string) {
+    async execute(id: string): Promise<DeleteResult> {
         const itemDB = await this.ItemsRepository.findById(id);
         if (!itemDB) {
             throw new Error("Item does not exist.");
         }
 
-        await this.ItemsRepository.delete(id);
+        return await this.ItemsRepository.delete(id);
     }
 }

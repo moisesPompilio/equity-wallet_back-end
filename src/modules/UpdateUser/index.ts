@@ -4,6 +4,6 @@ import { UpdateUserUseCase } from "./UpdateUserUseCsse";
 
 const postgresUsersRepository = new PostgresUsersRepository();
 
-const updateUserUseCase = new UpdateUserUseCase(postgresUsersRepository);
+export const updateUserUseCase = new UpdateUserUseCase(postgresUsersRepository);
 
 export const updateUserController = new UpdateUserController(updateUserUseCase);

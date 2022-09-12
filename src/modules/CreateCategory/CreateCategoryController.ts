@@ -10,14 +10,14 @@ export class CreateCategoryController {
         const { title, expense } = request.body;
         const idUser:any = await idetificationUser.execute(request);
         try {
-            await this.createCategoryUseCase.execute(
+            const result = await this.createCategoryUseCase.execute(
                 {
                     title,
                     expense,
                     idUser,
                 }
             );
-            return response.status(201).send();
+            return response.status(201).send(result);
         } catch (error) {
             return response.status(400).json({
                 message: error.message || "Unexpected error"

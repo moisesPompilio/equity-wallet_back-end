@@ -11,7 +11,7 @@ export class UpdateItemController {
         const { id } = request.params;
         const idUser: any = await idetificationUser.execute(request);
         try {
-            await this.updateItemUseCase.execute(
+            const result = await this.updateItemUseCase.execute(
                 {
                     id,
                     title,
@@ -21,7 +21,7 @@ export class UpdateItemController {
                     idUser,
                 }
             );
-            return response.status(200).send();
+            return response.status(200).send(result);
         } catch (error) {
             return response.status(400).json({
                 message: error.message || "Unexpected error"

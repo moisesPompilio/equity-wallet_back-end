@@ -10,7 +10,7 @@ export class CreateItemController {
         const { title, date, value, idCategory } = request.body;
         const idUser: any = await idetificationUser.execute(request);
         try {
-            await this.createItemUseCase.execute(
+            const result = await this.createItemUseCase.execute(
                 {
                     title,
                     date,
@@ -19,7 +19,7 @@ export class CreateItemController {
                     idUser
                 }
             );
-            return response.status(201).send();
+            return response.status(201).send(result);
         } catch (error) {
             return response.status(400).json({
                 message: error.message || "Unexpected error"
