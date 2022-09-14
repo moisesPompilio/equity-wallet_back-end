@@ -12,8 +12,8 @@ export class CreateToken {
         this.AUTHSERVE = process.env.AUTHSERVE;
         this.REFRESH_SECRET = process.env.REFRESH_SECRET;
 
-        const refreshToken = jsonwebtoken.sign({ id, ISSUE: this.ISSUE, AUTHSERVE: this.AUTHSERVE }, this.REFRESH_SECRET, { expiresIn: '180s' });
-        const token = jsonwebtoken.sign({ id, AUTHSERVE: this.AUTHSERVE }, this.SECRET, { expiresIn: '60s' });
+        const refreshToken = jsonwebtoken.sign({ id, ISSUE: this.ISSUE, AUTHSERVE: this.AUTHSERVE }, this.REFRESH_SECRET, { expiresIn: '3600s' });
+        const token = jsonwebtoken.sign({ id, AUTHSERVE: this.AUTHSERVE }, this.SECRET, { expiresIn: '1800s' });
 
         const tokenUser = new Token({ token, refreshToken });
         return tokenUser;
