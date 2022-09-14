@@ -59,9 +59,9 @@ export class User {
  *           description: The user password
  *       example:
  *         id: a226749e-ef77-49db-a061-01102c80f076
- *         name: rogerinho
- *         email: rogernho26@gmail.com
- *         password: 12345
+ *         name: Equity Wallet
+ *         email: equity-wallet@email.com
+ *         password: shazam
  */
 
 
@@ -82,6 +82,6 @@ export class User {
  *           type: string
  *           description: The Login password
  *       example:
- *         email: rogernho26@gmail.com
- *         password: 12345
+ *         email: equity-wallet@email.com
+ *         password: shazam
  */

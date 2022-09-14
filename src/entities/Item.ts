@@ -72,7 +72,7 @@ export class Item {
  *         id: a226749e-ef77-49db-a061-01102c80f076
  *         title: One BigMac
  *         date:  2022-08-27
- *         value: 12.75
+ *         value: 2.75
  *         idCategory: d921f80d-a327-4c1d-9308-68ec8942bdee
  *         idUser: 36f90846-04bd-4b0d-9fd9-3ad12f3aeb5a
  */

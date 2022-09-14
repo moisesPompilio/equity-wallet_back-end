@@ -26,7 +26,6 @@ export class UpdateCategoryUseCase {
 
         categoryDB.title = data.title ? data.title : categoryDB.title;
         categoryDB.expense = data.expense != null ? data.expense : categoryDB.expense;
-        console.log(categoryDB);
         return await this.categoryRepository.save(categoryDB);
     }
 }
