@@ -9,25 +9,15 @@
 <h1 align="center">Equity Wallet API</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/moisesPompilio
-/
-equity-wallet_back-end?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/moisesPompilio/equity-wallet_back-end?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/moisesPompilio
-/
-equity-wallet_back-end?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/moisesPompilio/equity-wallet_back-end?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/moisesPompilio
-/
-equity-wallet_back-end?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/moisesPompilio/equity-wallet_back-end?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/moisesPompilio
-/
-equity-wallet_back-end?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/moisesPompilio/equity-wallet_back-end?color=56BEB8">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/moisesPompilio
-/
-equity-wallet_back-end?color=56BEB8" />
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/moisesPompilio/equity-wallet_back-end?color=56BEB8" />
 
   <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/moisesPompilio
 /
@@ -51,9 +41,9 @@ equity-wallet_back-end?color=56BEB8" /> -->
   <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag_starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag_docker">Docker</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag_test">Test</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
+  <a href="#ship-docker">Docker</a> &#xa0; | &#xa0;
+  <a href="#test_tube-test">Test</a> &#xa0; | &#xa0;
   <a href="#memo-license">License</a> &#xa0; | &#xa0;
   <a href="https://github.com/moisesPompilio" target="_blank">Author</a>
 </p>
@@ -95,7 +85,7 @@ The following tools were used in this project:
 
 Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [Node](https://nodejs.org/en/) and [Docker](https://www.docker.com/) installed.
 
-## :checkered_flag_starting: Starting ##
+## :checkered_flag: Starting ##
 
 ```bash
 # Clone this project
@@ -115,7 +105,7 @@ $ yarn start
 # The server will initialize in the <http://localhost:3000>
 ```
 
-## :checkered_flag_docker: Docker ##
+## :ship: Docker ##
 
 ```bash
 # Clone this project
@@ -132,7 +122,7 @@ $ docker-compose up --build
 # The server will initialize in the <http://localhost:3001>
 ```
 
-## :checkered_flag_test: Test
+## :test_tube: Test
 
 ```bash
 # Clone this project
