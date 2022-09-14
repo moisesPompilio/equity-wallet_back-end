@@ -53,17 +53,18 @@ equity-wallet_back-end?color=56BEB8" /> -->
 ## :dart: About ##
 
 
-Equity Wallet Back-end is an API in TypeScript, it is in Rest and CRUD pattern, use SOLID pattern in its construction. In this way the API uses modern and agile technology.
+System developed to help people control their expenses, in an easy and practical way, thus saving time and encouraging people to have a conscious financial life.\
+Equity Wallet Back-end is an API in TypeScript, it is in Rest and CRUD pattern, use SOLID pattern in its construction. In this way the API uses modern and agile technology.\
 API has Docker and Swagger, so to be able to test the API it is necessary to have only Docker installed and execute the commands indicated in the Starting <a href="#checkered_flag_docker">Docker</a> &#xa0;, access the port in which you put the API to run in your browser and put "/docs"( example : htpp://localhost:3001/docs).
 
 ## :sparkles: Features ##
 
 :heavy_check_mark: Creation of entities;\
 :heavy_check_mark: Create the CRUD functions;\
-:heavy_check_mark: Creation of the routes;\:heavy_check_mark: 
-Implement Swagger;\
-Implement Jest and Supertest;\
-Implement Docker;\
+:heavy_check_mark: Creation of the routes;\
+:heavy_check_mark: Implement Swagger;\
+:heavy_check_mark: Implement Jest and Supertest;\
+:heavy_check_mark: Implement Docker;\
 :heavy_check_mark: encrypt the password;\
 :heavy_check_mark: Login authentication and refresh token contraction;
 
