@@ -11,5 +11,5 @@ jobs:
     steps: 
       - uses: action/checkout@3
       
-      name: Run a one-line script 
+      - name: Run a one-line script 
         run: echo hello world
