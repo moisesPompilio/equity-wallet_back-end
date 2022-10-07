@@ -9,7 +9,7 @@ jobs:
   example:
     runs-on: ubuntu-latest
     steps: 
-      - uses: action/checkout@3
+      - uses: actions/checkout@v3
       
       - name: Run a one-line script 
         run: echo hello world
