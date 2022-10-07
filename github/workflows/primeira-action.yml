@@ -1,0 +1,15 @@
+name: "CI (Integracao Continua): Primeira Action"
+on:
+  push:
+    branches: [main]
+  pull_request: 
+    branches: [main]
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: action/checkout@3
+      
+      name: Run a one-line script
+        run: echo hello world
