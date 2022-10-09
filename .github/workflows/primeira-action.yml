@@ -15,5 +15,5 @@ jobs:
         run: echo hello world
 
       - name: Run a list the files
-        run: ls -la
+        run: ls
 
