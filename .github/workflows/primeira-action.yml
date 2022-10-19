@@ -24,11 +24,11 @@ jobs:
         run: docker-compose up -d
         
       - name: Install depedencia
-        run: npm install
+        run: yarn
 
       - name: Test
-        run: npm run test
+        run: yarn test
       
       - name: Build
-        run: npm run serve
+        run: yarn serve
 
