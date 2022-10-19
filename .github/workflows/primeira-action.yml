@@ -24,7 +24,7 @@ jobs:
         run: docker-compose up -d
         
       - name: Install depedencia
-        run: yarn
+        run: sudo yarn
 
       - name: Test
         run: yarn test
