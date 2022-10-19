@@ -11,9 +11,24 @@ jobs:
     steps: 
       - uses: actions/checkout@v3
       
-      - name: Run a one-line script 
-        run: echo hello world
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.5.1
+        with:
+          node-version: 16.17.1
+      
 
-      - name: Run a list the files
-        run: ls -la
+      - name: Build-DB
+        run: docker-compose build
+
+      - name: Create-DB
+        run: docker-compose up -d
+        
+      - name: Install depedencia
+        run: npm install
+
+      - name: Test
+        run: npm run test
+      
+      - name: Build
+        run: npm run serve
 
