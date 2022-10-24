@@ -16,7 +16,6 @@ describe("Create Category", () => {
     let categoryExisting: any;
     beforeAll(async () => {
 
-
         connections = await createConnection()
 
         const user = await createUserUseCase.execute(userData);

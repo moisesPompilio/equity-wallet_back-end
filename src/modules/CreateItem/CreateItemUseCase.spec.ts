@@ -17,7 +17,6 @@ describe("Create Item", () => {
     let itemData: any;
     beforeAll(async () => {
 
-
         connections = await createConnection()
 
         const user = await createUserUseCase.execute(userData);

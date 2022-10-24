@@ -16,6 +16,7 @@ describe("Create Category Controller", () => {
         expense: true
     }
     beforeAll(async () => {
+        
         connections = await createConnection()
         await request(app)
             .post("/users")
