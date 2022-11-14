@@ -19,11 +19,8 @@ jobs:
       - name: Install depedencia
         run: sudo yarn
 
-      - name: Build-DB
-        run: docker-compose build
-
-      - name: Create-DB
-        run: docker-compose up -d
+      - name: Build-DB and Create a new database
+        run: docker compose  -f "docker-compose.yml" up -d --build database 
         
 
       - name: Test
